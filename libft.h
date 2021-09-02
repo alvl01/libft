@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amorici <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/02 14:51:52 by amorici           #+#    #+#             */
+/*   Updated: 2021/09/02 14:52:26 by amorici          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -28,14 +39,9 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);//compare the first n b
 char	*ft_strnstr(const char	*src, const char *tofind, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t n, size_t size);
-
-
-
-
-//if one of these args arre 0, it returns nuull. Establishes non uses space to a
-//nmemb each one of size
 char	*ft_strdup(const char *s);
-//duplicate *s
+
+
 
 
 
