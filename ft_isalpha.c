@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include"libft.h"
-int	ft_isalpha(int str)
+int	ft_isalpha(int c)
 {
-	return (str < 65 || (str > 90 && str < 97) || str > 122);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

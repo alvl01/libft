@@ -6,11 +6,11 @@
 /*   By: amorici <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 11:57:06 by amorici           #+#    #+#             */
-/*   Updated: 2021/09/01 11:57:23 by amorici          ###   ########.fr       */
+/*   Updated: 2021/09/03 10:20:22 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include"libft.h"
-int ft_isalnum (int str)
+int	ft_isalnum(int str)
 {
 	return (ft_isdigit(str) || ft_isalpha(str));
 }

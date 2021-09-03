@@ -9,12 +9,12 @@
 /*   Updated: 2021/07/19 21:00:53 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+#include "libft.h"
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	k;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
 	i = 0;
 	j = 0;

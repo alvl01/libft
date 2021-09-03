@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include"libft.h"
-int	space(char *s, char c)
+int	spaces(const char *s, char c)
 {
 	int	i;
 	int	space;
@@ -34,9 +34,9 @@ char	**ft_split(char const *s, char c)
 	char	**tab;
 
 	i = 0;
-	space = space(s, c);
+	space = spaces(s, c);
 	j = 0;
-	tab = (char *)malloc(sizeof(char *) * (space + 2));
+	tab = (char **)malloc(sizeof(char *) * (space + 2));
 	if (!tab)
 		return (NULL);
 	space = 0;

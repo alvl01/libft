@@ -6,11 +6,11 @@
 /*   By: amorici <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 18:03:53 by amorici           #+#    #+#             */
-/*   Updated: 2021/09/02 18:04:09 by amorici          ###   ########.fr       */
+/*   Updated: 2021/09/03 10:24:26 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_striteri(char *s, void (*f)(unsigned int,char*))
+#include"libft.h"
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 

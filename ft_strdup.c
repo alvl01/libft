@@ -6,13 +6,11 @@
 /*   By: amorici <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 14:50:19 by amorici           #+#    #+#             */
-/*   Updated: 2021/09/02 14:50:22 by amorici          ###   ########.fr       */
+/*   Updated: 2021/09/03 10:24:01 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-
-
 char	*ft_strdup(const char *s)
 {
 	char	*cpy;

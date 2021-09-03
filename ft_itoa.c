@@ -15,7 +15,14 @@ int	nbr_length(int n)
 	int	i;
 
 	i = 0;
-	while (n > 10)
+	if (n < 0)
+	{
+		n *= -1;
+		i++;
+	}
+	if (n == 0)
+		return (1);
+	while (n > 0)
 	{
 		i++;
 		n /= 10;
@@ -29,7 +36,7 @@ char	*ft_itoa2(int n, int count, int signe, char *c)
 		c[0] = '-';
 	while (count-- > 0)
 	{
-		c[count + signe] = 10 - n % 10 + 48;
+		c[count + signe] = n % 10 + 48;
 		n /= 10;
 	}
 	return (c);
@@ -45,13 +52,13 @@ char	*ft_itoa(int n)
 	c = NULL;
 	count = 0;
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	count = nbr_length(n);
-	c = malloc(sizeof(char) * (count));
+	c = malloc(sizeof(char) * (count + 1));
 	if (!c)
 		return (NULL);
 	if (n < 0)
-		c = ft_itoa2(n * -1, count, 1, c);
+		c = ft_itoa2(n * -1, count - 1, 1, c);
 	else
 		c = ft_itoa2(n, count, 0, c);
 	return (c);
