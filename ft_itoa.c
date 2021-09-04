@@ -34,6 +34,7 @@ char	*ft_itoa2(int n, int count, int signe, char *c)
 {
 	if (signe)
 		c[0] = '-';
+	c[count + signe] = '\0';
 	while (count-- > 0)
 	{
 		c[count + signe] = n % 10 + 48;

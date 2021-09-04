@@ -30,6 +30,12 @@ int	ft_atoi(const char *str)
 	else if (str[i] == 43 || str[i] == 45)
 		i++;
 	while (str[i] && ft_isdigit(str[i]) == 1)
+	{
 		n = n * 10 + (str[i++] - 48);
+		if ((n * sign) > 2147483647)
+			return (-1);
+		if ((n * sign) < -2147483648)
+			return (0);
+	}
 	return (sign * n);
 }

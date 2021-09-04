@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorici <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/15 12:29:48 by amorici           #+#    #+#             */
-/*   Updated: 2021/09/03 10:25:28 by amorici          ###   ########.fr       */
+/*   Created: 2021/09/02 14:51:52 by amorici           #+#    #+#             */
+/*   Updated: 2021/09/03 10:29:17 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
-char	*ft_strjoin(char const *s1, char const *s2)
+#include "libft.h"
+t_list	*ft_lstnew(void *content)
 {
-	int		i;
-	int		j;
-	char	*c;
+	t_list	*element;
 
-	j = 0;
-	if (!s1 || !s2)
+	element = malloc(sizeof(t_list));
+	if (!element)
 		return (NULL);
-	i = ft_strlen(s1) + ft_strlen(s2);
-	c = NULL;
-	c = malloc(sizeof(char) * (i + 1));
-	if (!c)
-		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		c[i] = s1[i];
-		i++;
-	}
-	while (s2[j])
-		c[i++] = s2[j++];
-	c[i] = '\0';
-	return (c);
+	element->content = content;
+	element->next = NULL;
+	return (element);
 }
