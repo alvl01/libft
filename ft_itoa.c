@@ -9,8 +9,9 @@
 /*   Updated: 2021/09/02 17:22:00 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
-int	nbr_length(int n)
+#include "libft.h"
+
+static int	nbr_length(int n)
 {
 	int	i;
 
@@ -30,7 +31,7 @@ int	nbr_length(int n)
 	return (i);
 }
 
-char	*ft_itoa2(int n, int count, int signe, char *c)
+static char	*ft_itoa2(int n, int count, int signe, char *c)
 {
 	if (signe)
 		c[0] = '-';

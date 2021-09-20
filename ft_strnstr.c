@@ -9,8 +9,8 @@
 /*   Updated: 2021/09/02 14:50:36 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#include"libft.h"
 char	*ft_strnstr(const char	*src, const char *tofind, size_t len)
 {
 	size_t	i;

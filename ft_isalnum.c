@@ -9,7 +9,8 @@
 /*   Updated: 2021/09/03 10:20:22 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+#include "libft.h"
+
 int	ft_isalnum(int str)
 {
 	return (ft_isdigit(str) || ft_isalpha(str));

@@ -9,13 +9,13 @@
 /*   Updated: 2021/09/03 10:22:44 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*a;
-	unsigned char	*b;
-	int				i;
+	unsigned char			*a;
+	unsigned char			*b;
+	size_t					i;
 
 	i = 0;
 	b = (unsigned char *)s2;

@@ -9,8 +9,8 @@
 /*   Updated: 2021/09/02 18:47:38 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#include"libft.h"
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);

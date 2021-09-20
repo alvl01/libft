@@ -9,8 +9,9 @@
 /*   Updated: 2021/07/19 20:56:26 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	while (*s1 && n && (*s1 == *s2))
 	{

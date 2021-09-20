@@ -9,8 +9,9 @@
 /*   Updated: 2021/09/03 10:25:28 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
-size_t	ft_strlen2(const char *str, char c, size_t i)
+#include "libft.h"
+
+static size_t	strlen2(const char *str, char c, size_t i)
 {
 	int	init;
 
@@ -20,7 +21,7 @@ size_t	ft_strlen2(const char *str, char c, size_t i)
 	return (i - init);
 }
 
-int	spaces(const char *s, char c)
+static int	spaces(const char *s, char c)
 {
 	int	i;
 	int	space;
@@ -38,30 +39,37 @@ int	spaces(const char *s, char c)
 	return (space);
 }
 
-char	**ft_split2(char **tab, int space, char c, char const *s)
+static char	**return_null(char **tab, int j)
 {
-	int		k;
-	int		i;
-	int		j;
+	while (j-- > 0)
+		free(tab[j]);
+	return (NULL);
+}
 
-	i = 0;
-	j = 0;
-	while (s[i] == c && s[i])
-		i++;
-	while (j < space && s[i])
+static char	**ft_split2(char **tab, int space, char c, char const *s)
+{
+	int		i[3];
+
+	i[0] = 0;
+	i[1] = 0;
+	while (s[i[0]] == c && s[i[0]])
+		i[0]++;
+	while (i[1] < space && s[i[0]])
 	{
-		k = 0;
-		tab[j] = (char *)ft_calloc(sizeof(char), (ft_strlen2(s, c, i) + 1));
-		while (s[i] != c && s[i])
+		i[2] = 0;
+		tab[i[1]] = (char *)ft_calloc(sizeof(char), (strlen2(s, c, i[0]) + 1));
+		if (!tab[i[1]])
+			return (return_null(tab, i[1]));
+		while (s[i[0]] != c && s[i[0]])
 		{
-			tab[j][k] = s[i];
-			k++;
-			i++;
+			tab[i[1]][i[2]] = s[i[0]];
+			i[2]++;
+			i[0]++;
 		}
-		tab[j][k] = '\0';
-		while (s[i] == c && s[i])
-			i++;
-		j++;
+		tab[i[1]][i[2]] = '\0';
+		while (s[i[0]] == c && s[i[0]])
+			i[0]++;
+		i[1]++;
 	}
 	return (tab);
 }
@@ -78,10 +86,15 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	space = spaces(s, c);
-	tab = (char **)malloc(sizeof(char *) * (space + 1));
+	tab = (char **)ft_calloc(sizeof(char *), (space + 1));
 	if (!tab)
 		return (NULL);
 	tab = ft_split2(tab, space, c, s);
+	if (!tab)
+	{
+		free(tab);
+		return (NULL);
+	}
 	tab[space] = NULL;
 	return (tab);
 }

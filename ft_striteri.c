@@ -9,12 +9,18 @@
 /*   Updated: 2021/09/03 10:24:26 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+#include "libft.h"
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
-		f(i, s[i]);
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

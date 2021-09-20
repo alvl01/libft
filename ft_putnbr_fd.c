@@ -9,8 +9,8 @@
 /*   Updated: 2021/09/02 18:47:07 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#include"libft.h"
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nbr;

@@ -9,8 +9,8 @@
 /*   Updated: 2021/09/02 14:49:59 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#include"libft.h"
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*a;
@@ -18,11 +18,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	a = (char *)dest;
 	b = (char *)src;
-	if (b == a || n == 0)
+	if (dest == src || n == 0)
 		return (a);
-	if (b < a && a - b <= (int)n)
+	if (b < a)
 	{
-		while (n-- > 0)
+		while (n--)
 			a[n] = b[n];
 	}
 	else

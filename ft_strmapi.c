@@ -9,7 +9,8 @@
 /*   Updated: 2021/09/03 10:27:09 by amorici          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+#include "libft.h"
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*s2;
